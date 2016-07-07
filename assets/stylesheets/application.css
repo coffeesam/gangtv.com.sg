@@ -587,9 +587,14 @@ body {
     @media screen and (max-height: 600px) {
       .hero .container {
         margin: 20vh auto; } }
+    .hero .container .logo {
+      width: 100;
+      height: 80px;
+      background-image: url(/images/gangtv.png);
+      background-size: 100px; }
     .hero .container h1 {
       font-weight: 300;
-      font-size: 1.2em; }
+      font-size: 1.5em; }
     .hero .container h1.title {
       font-weight: 100;
       font-size: 3em; }
