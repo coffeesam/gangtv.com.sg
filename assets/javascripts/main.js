@@ -24,4 +24,3 @@ function bindNavBarMenu() {
     $('.navbar').removeClass('minibar')
   });
 }
-;
