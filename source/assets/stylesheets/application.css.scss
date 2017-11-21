@@ -1,7 +1,10 @@
-@import "vendor/normalize";
+//@import "vendor/normalize";
+//
+//@import "bourbon";
+//@import "base/base";
+//@import "neat";
+//
+//@import "global";
 
-@import "bourbon";
-@import "base/base";
-@import "neat";
-
-@import "global";
+@import "pages/main";
+@import "pages/responsive";
