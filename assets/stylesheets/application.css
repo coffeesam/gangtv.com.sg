@@ -47,12 +47,10 @@ h1, h2 {
   word-spacing: 8px; }
 
 h1 {
-  margin-bottom: 60px; }
+  margin: 60px 0px; }
 
 h2 {
   color: #EEEEEE; }
-  h2 span.text-highlight {
-    color: #44f7ff; }
 
 h6 {
   margin: 0;
@@ -69,6 +67,12 @@ p {
   color: #666666; }
   p.copyright {
     font-size: 1em; }
+
+.text-highlight {
+  color: #44f7ff; }
+
+.text-title {
+  color: #4a648e; }
 
 .minibar {
   -webkit-animation: slide-menu 0.7s;
