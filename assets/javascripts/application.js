@@ -1,7 +1,11 @@
 (function() {
+  var access = "aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vaGVsbG9AZ2FuZ3R2LmNvbS5zZw==";
+  var key    = atob(access);
+  
   $(document).ready(function() {
     initHeadroom();
     bindContactFormSubmitButton();
+    bindContactFormNameChange();
   });
 
   function initHeadroom() {
@@ -56,7 +60,7 @@
 
   function formPerformAjax(formData) {
     $.ajax({
-      url: "https://formspree.io/hello@gangtv.com.sg",
+      url: key,
       method: "POST",
       data: formData,
       dataType: "json",
@@ -83,6 +87,15 @@
         animateSubmitButton();
         var data = serializeFormData();
         formPerformAjax(data);
+      }
+    });
+  }
+
+  function bindContactFormNameChange() {
+    $('form.contact-form input[name="name"]').on('change', function(e) {
+      var name = $(this).val();
+      if(name.length > 0) {
+        $('form.contact-form input[name="_subject"]').val("New inquiry from " + name);
       }
     });
   }
