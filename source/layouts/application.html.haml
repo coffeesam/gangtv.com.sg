@@ -4,29 +4,83 @@
     %meta{charset: "utf-8"}
     %meta{content: "IE=edge,chrome=1", http: {equiv: "X-UA-Compatible"}}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
-    %meta{"http-equiv" => "Content-Security-Policy", :content => "default-src https: 'self' ; script-src https: 'self' maxcdn.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com www.google-analytics.com; style-src https: 'self' maxcdn.bootstrapcdn.com; img-src https: data: 'self' www.google-analytics.com; font-src https: 'self' fonts.googleapis.com; media-src https: 'self' ; frame-src 'none';"}/
+    %meta{"http-equiv" => "Content-Security-Policy", :content => "default-src https: 'self' ; script-src https: 'self' maxcdn.bootstrapcdn.com code.jquery.com cdnjs.cloudflare.com www.google-analytics.com; style-src https: 'self' maxcdn.bootstrapcdn.com; img-src https: data: 'self' www.google-analytics.com; font-src https: 'self' fonts.googleapis.com; media-src https: 'self' ; frame-src https: docs.google.com; connect-src ws: wss: https: 'self' formspree.io;"}/
     %title= current_page.data.title || "Gang TV Media"
     %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css", :rel => "stylesheet", :integrity => "sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb", :crossorigin => "anonymous"}/
+    %link{:crossorigin => "anonymous", :href => "https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.min.css", :integrity => "sha256-Zv7awGYV3teGPlDfjOAKmW4gkBHgx08TFrXGzylxWGg=", :rel => "stylesheet"}/
     = stylesheet_link_tag "application"
-    %script{:src => "https://code.jquery.com/jquery-3.2.1.slim.min.js", :integrity => "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", :crossorigin => "anonymous"}
+    %script{:src => "https://code.jquery.com/jquery-3.2.1.min.js", :integrity => "sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f", :crossorigin => "anonymous"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js", :integrity => "sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh", :crossorigin => "anonymous"}
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js", :integrity => "sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ", :crossorigin => "anonymous"}
-    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js", :integrity => "sha384-ugp/e34LtoER7mwf3SLygR0OL+STa4FTLzk7MRbpY/usE4VV+24hBxRXRS6g5ZJy", :crossorigin => "anonymous"}
+    %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js", :integrity => "sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=", :crossorigin => "anonymous"}
+    %script{:crossorigin => "anonymous", :integrity => "sha256-sdzmW0BYa4Nk66iq6OVTvwVWI0zcz9M8MPEVVlZeKRk=", :src => "https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.min.js"}
     = javascript_include_tag "application"
-    %link{:href => "//gangtv.com.sg/apple-touch-icon-57x57.png", :rel => "apple-touch-icon-precomposed", :sizes => "57x57"}/
-    %link{:href => "//gangtv.com.sg/apple-touch-icon-114x114.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
-    %link{:href => "//gangtv.com.sg/apple-touch-icon-72x72.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
-    %link{:href => "//gangtv.com.sg/apple-touch-icon-144x144.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
-    %link{:href => "//gangtv.com.sg/apple-touch-icon-120x120.png", :rel => "apple-touch-icon-precomposed", :sizes => "120x120"}/
-    %link{:href => "//gangtv.com.sg/apple-touch-icon-152x152.png", :rel => "apple-touch-icon-precomposed", :sizes => "152x152"}/
-    %link{:href => "//gangtv.com.sg/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
-    %link{:href => "//gangtv.com.sg/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %link{:href => "apple-touch-icon-57x57.png", :rel => "apple-touch-icon-precomposed", :sizes => "57x57"}/
+    %link{:href => "apple-touch-icon-114x114.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
+    %link{:href => "apple-touch-icon-72x72.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
+    %link{:href => "apple-touch-icon-144x144.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
+    %link{:href => "apple-touch-icon-120x120.png", :rel => "apple-touch-icon-precomposed", :sizes => "120x120"}/
+    %link{:href => "apple-touch-icon-152x152.png", :rel => "apple-touch-icon-precomposed", :sizes => "152x152"}/
+    %link{:href => "favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
+    %link{:href => "favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
     %link{:href => "favicon.ico", :rel => "icon", :sizes => "32x32", :type => "image/x-icon"}/
     %meta{:content => "GangTV", :name => "application-name"}/
     %meta{:content => "#383838", :name => "msapplication-TileColor"}/
-    %meta{:content => "//gangtv.com.sg/mstile-144x144.png", :name => "msapplication-TileImage"}/
+    %meta{:content => "mstile-144x144.png", :name => "msapplication-TileImage"}/
   %body{class: page_classes, "data-offset" => "0", "data-spy" => "scroll", "data-target" => ".navbar"}
+    .hero
+      %nav.navbar.navbar-toggleable-sm.fixed-top.navbar-dark.bg-translucent.navbar-expand-lg{'data-headroom' => true}
+        %a.navbar-brand{:href => "/"}
+          %img.d-inline-block.align-top.logo{src: '/assets/images/gangtv-logo.png', alt:''}
+          %img.d-inline-block.logo-text{src: '/assets/images/gangtv-logo-text.png', alt:'GangTV'}
+        %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+          %span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          %ul.navbar-nav.mr-auto
+            %li.nav-item{class: active?(:about)}
+              %a.nav-link{:href => "/"}
+                About
+                %span.sr-only (current)
+            %li.nav-item{class: active?(:services)}
+              %a.nav-link{:href => "services"} Services
+            %li.nav-item{class: active?(:contact)}
+              %a.nav-link{:href => "#", "data-target" => ".contactModal", "data-toggle" => "modal"} Contact
+            -# %li.nav-item{class: active?(:network)}
+            -#   %a.nav-link.disabled{:href => "#"} Coming Soon...
+      .profile.align-self-center
+        %img{src: '/assets/images/gregory-profile.png', alt: ''}
+        %h2.title
+          %span.text-highlight G
+          %span> REGORY
+          %span
+          %span.text-highlight ANG
+          %h6.text-center Content Network Expert
     = yield
+    .contactModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "contactModalTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-lg.modal-dark{:role => "document"}
+        .modal-content
+          %form.contact-form
+            .modal-header
+              %h5#contactModalTitle.modal-title Contact
+              %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                %span{"aria-hidden" => "true"} ×
+            .modal-body
+              %input{:name => "_subject", :type => "hidden", :value => "New submission!"}
+              %input{:name => "_gotcha", :type => "text"}/
+              .row
+                .form-group.col-xs-12.col-md-6
+                  %label{for: 'name'} Your Name
+                  %input.form-control{:name => "name", :type => "text", :placeholder => "How should I address you?", required: true}/
+                .form-group.col-xs-12.col-md-6
+                  %label{for: '_replyto'} Your Email
+                  %input.form-control{:name => "_replyto", :type => "email", :placeholder => "you@yourdomain.com", required: true}/
+                  %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+              .form-group
+                %label{for: 'name'} Inquiry
+                %textarea.form-control{:name => "inquiry", :rows => "6", :placeholder => "What can I help you with?", required: true}
+            .modal-footer
+              %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Cancel
+              %input.btn.btn-success{:type => "submit"}
     %footer{role: 'footer'}
       .footer-bottom
         .logo-lockup

@@ -1,3 +1,4 @@
+require 'helpers'
 activate :directory_indexes
 activate :autoprefixer
 
