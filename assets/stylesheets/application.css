@@ -123,9 +123,10 @@ ul.services {
     list-style: none;
     margin-bottom: 1.8em; }
   ul.services.services-sm li {
-    list-style: square inside;
+    list-style: square outside;
     font-weight: 300;
-    font-size: 1.1em; }
+    font-size: 1.1em;
+    margin-left: 20px; }
 
 .footer-bottom {
   padding-top: 240px; }

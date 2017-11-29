@@ -1,7 +1,7 @@
 (function() {
   var access = "aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vaGVsbG9AZ2FuZ3R2LmNvbS5zZw==";
   var key    = atob(access);
-  
+
   $(document).ready(function() {
     initHeadroom();
     bindContactFormSubmitButton();
@@ -93,7 +93,7 @@
 
   function bindContactFormNameChange() {
     $('form.contact-form input[name="name"]').on('change', function(e) {
-      var name = $(this).val();
+      var name = $('form.contact-form input[name="name"]').val();
       if(name.length > 0) {
         $('form.contact-form input[name="_subject"]').val("New inquiry from " + name);
       }
