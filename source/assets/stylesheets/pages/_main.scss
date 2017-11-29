@@ -136,9 +136,10 @@ ul.services {
   }
   &.services-sm {
     li {
-      list-style: square inside;
+      list-style: square outside;
       font-weight: 300;
       font-size: 1.1em;
+      margin-left: 20px;
     }
   }
 }
