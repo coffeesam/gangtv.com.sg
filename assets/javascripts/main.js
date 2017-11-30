@@ -4,8 +4,10 @@
 
   $(document).ready(function() {
     initHeadroom();
+    bindNavbarEvents();
     bindContactFormSubmitButton();
     bindContactFormNameChange();
+    bindModalEvents();
   });
 
   function initHeadroom() {
@@ -100,4 +102,25 @@
     });
   }
 
+  function bindNavbarEvents() {
+    $('#navbarSupportedContent').on('show.bs.collapse', function() {
+      $('.navbar').addClass('navbar-dark--open');
+    });
+    $('#navbarSupportedContent').on('hide.bs.collapse', function() {
+      $('.navbar').removeClass('navbar-dark--open');
+    });
+  }
+
+  function bindModalEvents() {
+    $('.modal').on('show.bs.modal', function() {
+      if(window.innerWidth < 576) {
+        $('body').addClass('position-fixed');
+        $('#navbarSupportedContent').collapse('hide');
+      }
+    });
+
+    $('.modal').on('hide.bs.modal', function() {
+      $('body').removeClass('position-fixed');
+    })
+  }
 })();
