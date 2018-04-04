@@ -8,8 +8,17 @@
     bindContactFormSubmitButton();
     bindContactFormNameChange();
     bindModalEvents();
+    animateGangGregory();
   });
 
+  function animateGangGregory() {
+    setTimeout(function() {
+      $('.title').animate({opacity: 1}, 800).delay(1000).queue(function(next) {
+        $('.regory').animate({width: "4.3em"},800).text('REGORY').animate({opacity: 1}, 800);
+        next();
+      })
+    },600)
+  }
   function initHeadroom() {
     var navbar = document.querySelector(".navbar");
     var headroom  = new Headroom(navbar);

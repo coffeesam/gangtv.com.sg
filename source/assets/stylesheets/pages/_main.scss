@@ -40,10 +40,15 @@ a, img {
 
 .profile, .profile img {
   margin: 0 auto;
-  margin-top: 20px;
 }
 
-.profile img { margin-left: 20px;}
+.profile {
+  width: 20vw;
+  max-width: 250px;
+  min-width: 240px;
+  margin-top: 40px;
+}
+.profile img { width: 100%; margin-left: 5px;}
 
 .container {
   display: flex;
@@ -85,6 +90,19 @@ h1 {
 
 h2.title {
   color: #EEEEEE;
+  text-align: center;
+  opacity: 0;
+}
+
+.regory {
+  width: 0;
+  text-align: left;
+  opacity: 0;
+}
+
+h2.title, .regory {
+  line-height: 1.2em;
+  vertical-align: bottom;
 }
 
 h6 { margin: 0; color: #eeeeee; font-weight: 200; }
