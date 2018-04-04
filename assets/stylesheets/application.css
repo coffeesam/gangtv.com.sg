@@ -30,11 +30,17 @@ a:active, a:visited, a:focus, img:active, img:visited, img:focus {
   min-height: 450px; }
 
 .profile, .profile img {
-  margin: 0 auto;
-  margin-top: 20px; }
+  margin: 0 auto; }
+
+.profile {
+  width: 20vw;
+  max-width: 250px;
+  min-width: 240px;
+  margin-top: 40px; }
 
 .profile img {
-  margin-left: 20px; }
+  width: 100%;
+  margin-left: 5px; }
 
 .container {
   display: -webkit-box;
@@ -72,7 +78,18 @@ h1 {
   margin: 60px 0px; }
 
 h2.title {
-  color: #EEEEEE; }
+  color: #EEEEEE;
+  text-align: center;
+  opacity: 0; }
+
+.regory {
+  width: 0;
+  text-align: left;
+  opacity: 0; }
+
+h2.title, .regory {
+  line-height: 1.2em;
+  vertical-align: bottom; }
 
 h6 {
   margin: 0;
