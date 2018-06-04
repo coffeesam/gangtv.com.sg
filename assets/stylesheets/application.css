@@ -115,6 +115,9 @@ p, li, h1, h2, h3 {
 .text-title {
   color: #4a648e; }
 
+.strong {
+  font-weight: 600; }
+
 .minibar {
   -webkit-animation: slide-menu 0.7s;
           animation: slide-menu 0.7s;
