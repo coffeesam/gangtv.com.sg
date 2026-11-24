@@ -4,6 +4,11 @@
   "name": "gangtv-com-sg",
   "compatibility_date": "2026-11-24",
   "assets": {
-    "directory": "./public"
-  }
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "gangtv.com.sg", "custom_domain": true },
+    { "pattern": "www.gangtv.com.sg", "custom_domain": true }
+  ]
 }
