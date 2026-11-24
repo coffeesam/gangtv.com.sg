@@ -1,0 +1,9 @@
+{
+  // Static site served by Cloudflare Workers static assets. No Worker script.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gangtv-com-sg",
+  "compatibility_date": "2026-11-24",
+  "assets": {
+    "directory": "./public"
+  }
+}
